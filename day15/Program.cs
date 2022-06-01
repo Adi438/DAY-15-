@@ -6,7 +6,6 @@ namespace BSTAndHashTable
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Hello, welcome to HashTable Problem\n\n");
 
             MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
@@ -30,8 +29,14 @@ namespace BSTAndHashTable
             hash.Add("17", "avoidable");
             hash.Add("18", "situations");
 
-            string hashget = hash.Get("18");
+            string hashget = hash.Get("17");
             Console.WriteLine("18th index value is: " + hashget);
+            Console.WriteLine("Removing \"avoidable\" word from above paragraph\n");
+
+            string hash2 = hash.Get("17");
+            Console.WriteLine("Removed value from Paragraph is: " + hash2);
+            hash.Remove("17");
+
         }
     }
 }
